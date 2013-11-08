@@ -37,15 +37,9 @@ plugins=(git python debian svn rsync)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export ZSH_TMUX_TERM='screen-256color-bce'
-alias tmux='TERM=$ZSH_TMUX_TERM tmux'
 export  PATH=$PATH:~/.local/bin
-
-export PYTHONPATH=$PYTHONPATH:~/Masterarbeit/Code/src/HMM
-
 eval `dircolors ~/.dircolors`
 
-function sync_mpi {
-    rsync -avzur --progress -h mpi:Masterarbeit/Data/ ~/Masterarbeit/Data/
-    rsync -avzur --progress -h ~/Masterarbeit/Data/ mpi:Masterarbeit/Data/
-}
+# Source every file that is in ~/.zsh_sources. This way I can have a few machines
+# with stuff that I do not want to be everywhere
+for f in ~/.zsh_sources/*; do source $f; done
