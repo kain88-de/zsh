@@ -43,6 +43,11 @@ source $ZSH/oh-my-zsh.sh
 export  PATH=$PATH:~/.local/bin
 eval `dircolors ~/.dircolors`
 
+# disable XOFF to use C-s in vim for saving a file
+# http://raamdev.com/2007/recovering-from-ctrls-in-putty/
+stty ixany
+stty ixoff -ixon
+
 # Source every file that is in ~/.zsh_sources. This way I can have a few machines
 # with stuff that I do not want to be everywhere
 for f in ~/.zsh_sources/*; do source $f; done
