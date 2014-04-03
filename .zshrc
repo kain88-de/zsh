@@ -41,7 +41,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export  PATH=$PATH:~/.local/bin
-eval `dircolors ~/.dircolors`
+if [ $(uname) = 'Linux' ]
+then
+    eval `dircolors ~/.dircolors`
+fi
 
 # disable XOFF to use C-s in vim for saving a file
 # http://raamdev.com/2007/recovering-from-ctrls-in-putty/
