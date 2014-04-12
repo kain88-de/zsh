@@ -41,6 +41,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export  PATH=$PATH:~/.local/bin
+
+# to show correct dircolors for solarized in linux-terminal
 if [ $(uname) = 'Linux' ]
 then
     eval `dircolors ~/.dircolors`
