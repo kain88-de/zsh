@@ -53,6 +53,12 @@ fi
 stty ixany
 stty ixoff -ixon
 
+# use a colorfull gcc
+if [ ! -z :"`which colorgcc`" ]; then
+    export CC="colorgcc"
+    alias gcc='colorgcc'
+fi
+
 # use custom-colors for less, this way it is usable in tmux again
 # http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
