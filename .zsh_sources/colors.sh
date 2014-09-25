@@ -16,4 +16,7 @@ switch_color () {
     [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 }
 
-dark_color
+# Only set colorscheme in an interactive shell
+if shopt -q login_shell; then
+    dark_color
+fi
