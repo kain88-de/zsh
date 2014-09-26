@@ -17,6 +17,6 @@ switch_color () {
 }
 
 # Only set colorscheme in an interactive shell
-if shopt -q login_shell; then
-    dark_color
+if [[ "$SHELL" == "/bin/zsh" ]]; then
+    dark_color;
 fi
