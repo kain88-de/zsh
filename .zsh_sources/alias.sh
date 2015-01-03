@@ -6,4 +6,4 @@ alias startnb="ipython notebook --no-browser --port=8666"
 alias open='xdg-open'
 
 alias oldlibs="grep -l '*deleted' /proc/*/maps | tr -cd 0-9\\n | xargs -r ps u"
-alias test_internet='ping -c5 8.8.8.8'
+alias test_internet='ping -c5 8.8.8.8 -W 1'
