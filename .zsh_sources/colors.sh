@@ -15,8 +15,3 @@ switch_color () {
     export BASE16_SCHEME
     [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 }
-
-# Only set colorscheme in an interactive shell
-if [[ "$SHELL" == "/bin/zsh" ]]; then
-    dark_color;
-fi
