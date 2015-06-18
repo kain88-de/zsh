@@ -11,3 +11,6 @@ alias test_internet='ping -c5 8.8.8.8 -W 1'
 
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
+
+alias tmuxl='tmux ls'
+alias tmuxa='tmux a -t'
