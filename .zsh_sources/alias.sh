@@ -1,8 +1,8 @@
-alias remotenb="ssh -N -f -L 8666:localhost:8666 mpi"
-alias killremotenb="ps ax| grep '8666:localhost'| grep -v grep | awk '{print $1}' | xargs kill"
+alias remotenb="ssh -N -f -L 8666:localhost:8666 work"
+alias killremotenb="kill $(ps ax | grep '[8]666:localhost' | awk '{print $1}')"
 alias listssh="ps ax |  grep ssh | grep -v grep"
-alias startnb="ipython notebook --no-browser --port=8666"
-alias notebook="ipython notebook"
+alias startnb="jupyter notebook --no-browser --port=8666"
+alias notebook="jupyter notebook"
 
 alias open='xdg-open'
 
