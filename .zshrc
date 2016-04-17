@@ -32,12 +32,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rsync colorize virtualenvwrapper)
+plugins=(rsync colorize)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export  PATH=~/.local/bin:$PATH
+export  PATH=~/.local/bin:$HOME/conda/bin:$PATH
 
 # to show correct dircolors for solarized in linux-terminal
 
