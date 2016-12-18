@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="gallifrey"
+# ZSH_THEME="pure"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -32,12 +33,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rsync colorize)
+plugins=(rsync cargo colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export  PATH=~/.local/bin:$HOME/conda/bin:$PATH
+export  PATH=~/.local/bin:$HOME/conda/bin:$PATH:$HOME/.cargo/bin
 
 # to show correct dircolors for solarized in linux-terminal
 
